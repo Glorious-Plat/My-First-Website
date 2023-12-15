@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            #grid{
+                border:5px solid orange;
+                display:grid;
+                grid-template-columns: 150px 1fr;   
+                /* 1fr = 나머지 공간 모두
+                   1fr 2ft = 1:2의 공간을 각각 차지함*/
+            }
+            div {
+                border: 5px solid blue;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 아무런 의미 없이 디자인만을 위해 고안된 무색무취한 태그
+           div  : inline element
+           span : block level element -->
+
+        <div id="grid">
+            <div>NAVIGATION</div>
+            <div>ARTICLE</div>
+        </div>
+
+        <!-- 2개의 태그를 나란히 놓거나, 함께 감싸고 싶으면
+             부모 div 태그가 필요함-->
+    </body>
+</html>
