@@ -4,6 +4,15 @@
     <title>WEB1-CSS</title>
     <meta charset="utf-8">
 
+    <link rel="stylesheet" href="style.css">
+    <!-- 위의 link 태그를 이용하여 아래 style 태그를 대체할 수 있음
+             (효과1 : 중복의 제거) 웹페이지가 1억개라고 할 때, 각 페이지로 들어가
+                                    style 태그 내용을 일일이 수정하는 불편함 대신
+                                    style.css 파일만 바꾸면 모든 게 수정된다.
+             (효과2 : 비용의 절감) 웹페이지를 불러올 때 style.css를 캐싱함으로써
+                                    다운로드 용량이 줄어들고, 그에 따라서 
+                                    서버 사용비용, 로딩시간 등이 대폭 절감된다.
+ 
     <style>
         a { 
             color:black; 
@@ -39,7 +48,21 @@
         
         }
         
+        /*아래는 미디어 쿼리 적용*/
+        @media(max-width:700px) {
+            #grid {
+                display:block;
+            }
+            #grid #article {
+                border-left:none;
+            }
+            h1 {
+                border-bottom:none;
+            }
+        }
+
     </style>
+    -->
 
 </head>
 

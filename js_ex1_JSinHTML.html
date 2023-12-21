@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- JS 구현 1. script 태그를 이용 -->
+    <script>
+        document.write('hello world');
+    </script>
+    <h1>html</h1>
+    hello world
+    <br>
+    <br>
+    <br>
+
+    <!-- JS 구현 2. event / onclick(등 이벤트)의 값으로는 JS 코드가 와야 함 -->
+    <input type="button" value="hi" onclick="alert('hi')">
+    <input type="text" onchange="alert('changed')">
+    <input type="text" onkeydown="alert('key down!')">
+
+    <!-- JS 구현 3. console (크롬 브라우저 > 우클릭 > 검사) 
+        (예시1) 콘솔 창에 alert('text'.length) - 문자 개수 세주기
+        (예시2) 1000개 넘는 댓글 중에서 랜덤추첨 - 콘솔 창의 JS 코드는 내가 보고있는 웹페이지를 토대로 실행됨
+                                            - 내가 보고 있는 웹페이지를 근거로 자료를 뽑아냄
+    -->
+</body>
+</html>
+
+
+<!--
+    JavaScript를 구현하는 방법
+        1. script 태그를 이용
+        2. event   (예) onclick, onchange, onkeydown .....
+        3. console
+
+    검색어
+        1. javascript alert
+        2. javascript key down event attribute
+-->
