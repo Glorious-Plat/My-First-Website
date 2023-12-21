@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+    <title>WEB1-JS</title>
+    <meta charset="utf-8">
+
+    <style>
+        /* js class 에 한꺼번에 CSS 디자인 적용
+           적용 우선순위 : id > class > tag */
+        .js {
+            font-weight: bold;
+            color:red;
+        }
+        #first {
+            color:green;
+        }
+        span {
+            color:blue;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+
+    <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+    ">
+    <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+    ">
+
+    <input id="night_day" type="button" value="night" onclick="
+    if (document.querySelector('#night_day').value === 'night') {
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#night_day').value = 'day';
+    } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#night_day').value = 'night';
+    }
+    ">
+
+
+    <ul>
+        <li><a href="1.html">1. HTML</a></li>
+        <li><a href="2.html">2. CSS</a></li>
+        <li><a href="3.html">3. Java Script</a></li>
+    </ul>
+
+    <!-- 아래 h2 태그에 CSS 적용 -->
+    <h2 style="background-color:coral;color:powderblue">Java Script</h2>
+
+
+    <!-- 일부 문자열만 CSS로 꾸며주기 -->
+    <p>
+        <span class="js" id="first">JavaScript</span> (/ˈdʒɑːvəskrɪpt/), often abbreviated as JS, 
+        is a programming language that is one of the core technologies 
+        of the World Wide Web, alongside <span>HTML</span> and <span>CSS</span>. 
+        As of 2023, 98.7% of websites use <span class="js">JavaScript</span> on the client side 
+        for webpage behavior, often incorporating third-party libraries. 
+        All major web browsers have a dedicated <span class="js">JavaScript</span> engine 
+        to execute the code on users' devices.
+    </p>
+    <p></p>
+    
+
+    <!-- 리팩토링 중복의 제거 / 효율화 -->
+    <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if (this.value === 'night') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+    } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+    }
+    ">
+
+
+</body>
+</html>
